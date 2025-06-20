@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>喵喵百科</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: #c3c3c3;
+            padding: 1rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.02);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 1rem;
+        }
+        .card-content h2 {
+            margin: 0 0 0.5rem;
+            font-size: 1.2rem;
+        }
+        .card-content p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .search-box {
+            max-width: 600px;
+            margin: 2rem auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+        footer {
+            background: #ececec;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 3rem;
+        }
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .footer-container p {
+            margin: 0.4rem 0;
+        }
+        header {
+            background: linear-gradient(135deg, #fddde6, #d3c1e5);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+        header h1 {
+            color: #5c4b51;
+            font-size: 2.5rem;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>喵喵百科</h1>
+</header>
+
+<div class="search-box">
+    <input type="text" placeholder="搜尋品種..." />
+</div>
+
+<div class="grid">
+    <div class="card">
+        <a href="british-shorthair.html">
+            <img src="cats/英國短毛貓.jpg" alt="英國短毛貓" />
+            <div class="card-content">
+                <h2>英國短毛貓</h2>
+                <p>英短擁有圓滾滾的臉龐與溫馴的性格，非常適合家庭飼養。</p>
+            </div>
+        </a>
+    </div>
+    <div class="card">
+        <a href="maine-coon.html">
+            <img src="cats/緬因貓.jpg" alt="緬因貓" />
+            <div class="card-content">
+                <h2>緬因貓</h2>
+                <p>體型大且毛髮蓬鬆，緬因貓性格親人，是知名的巨型貓品種。</p>
+            </div>
+        </a>
+    </div>
+    <div class="card">
+        <a href="siamese.html">
+            <img src="cats/暹羅貓.jpg" alt="暹羅貓" />
+            <div class="card-content">
+                <h2>暹羅貓</h2>
+                <p>暹羅貓有著深邃藍眼睛與高傲的氣質，個性活潑且黏人。</p>
+            </div>
+        </a>
+    </div>
+    <div class="card">
+        <a href="persian.html">
+            <img src="cats/波斯貓.jpg" alt="波斯貓" />
+            <div class="card-content">
+                <h2>波斯貓</h2>
+                <p>波斯貓有著濃密毛髮與優雅氣質，是古老而受歡迎的品種。</p>
+            </div>
+        </a>
+    </div>
+    <div class="card">
+        <a href="sphynx.html">
+            <img src="cats/無毛貓.jpg" alt="無毛貓" />
+            <div class="card-content">
+                <h2>無毛貓（斯芬克斯）</h2>
+                <p>斯芬克斯是知名的無毛貓，皮膚溫暖且個性黏人。</p>
+            </div>
+        </a>
+    </div>
+    <div class="card">
+        <a href="abyssinian.html">
+            <img src="cats/阿比西尼亞貓.jpg" alt="阿比西尼亞貓" />
+            <div class="card-content">
+                <h2>阿比西尼亞貓</h2>
+                <p>阿比西尼亞貓活潑好動，毛色獨特且有野性之美。</p>
+            </div>
+        </a>
+    </div>
+    <div class="card">
+        <a href="russian-blue.html">
+            <img src="cats/俄羅斯藍貓.jpg" alt="俄羅斯藍貓" />
+            <div class="card-content">
+                <h2>俄羅斯藍貓</h2>
+                <p>俄羅斯藍擁有閃亮銀灰色毛與溫柔安靜的個性。</p>
+            </div>
+        </a>
+    </div>
+    <div class="card">
+        <a href="american-shorthair.html">
+            <img src="cats/美國短毛貓.jpg" alt="美國短毛貓" />
+            <div class="card-content">
+                <h2>美國短毛貓</h2>
+                <p>美短體格結實、健康好養，是北美最常見的家貓之一。</p>
+            </div>
+        </a>
+    </div>
+    <div class="card">
+        <a href="bengal.html">
+            <img src="cats/孟加拉貓.jpg" alt="孟加拉貓" />
+            <div class="card-content">
+                <h2>孟加拉貓</h2>
+                <p>擁有豹紋般的斑點毛色，活潑、好動，極具野性美感，是非常有特色的家貓品種。</p>
+            </div>
+        </a>
+    </div>
+    <div class="card">
+        <a href="exotic-shorthair.html">
+            <img src="cats/加菲貓.jpg" alt="加菲貓">
+            <div class="card-content">
+                <h2>加菲貓</h2>
+                <p>加菲貓是短毛版的波斯貓，有著扁平臉、溫和黏人的個性，是超級療癒的沙發馬鈴薯。</p>
+            </div>
+        </a>
+    </div>
+    <div class="card">
+        <a href="scottish-fold.html">
+            <img src="cats/蘇格蘭摺耳貓.jpg" alt="蘇格蘭摺耳貓">
+            <div class="card-content">
+                <h2>蘇格蘭摺耳貓</h2>
+                <p>招牌摺耳是特色，表情永遠呆萌，個性親人、適應力強，是超人氣的家庭貓咪！</p>
+            </div>
+        </a>
+    </div>
+    <div class="card">
+        <a href="laperm.html">
+            <img src="cats/拉波貓.jpg" alt="拉波貓">
+            <div class="card-content">
+                <h2>拉波貓</h2>
+                <p>這種貓擁有天然鬈毛，看起來像是剛做完造型，性格溫柔、喜歡親近人類。</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+<footer>
+    <div class="footer-container">
+        <p>聯絡我們：<a href="mailto:meow@catpedia.com">meow@catpedia.com</a></p>
+        <p>社群連結：
+            <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a> |
+            <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a> |
+            <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+        </p>
+        <p>© 2025 喵喵百科 CatPedia | Designed by 月貓貓貓</p>
+    </div>
+</footer>
+</body>
+</html>
